@@ -25,7 +25,7 @@ func New(cn io.ReadWriter) *LSM6DS33 {
 	return &LSM6DS33{cn, nil}
 }
 
-// Stop will initialize the accelerometer and gyroscope.
+// Start will initialize the accelerometer and gyroscope.
 func (d *LSM6DS33) Start() error {
 	d.write(CTRL1_XL, 0x00)
 	d.write(CTRL2_G, 0x00)
