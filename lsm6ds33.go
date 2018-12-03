@@ -21,12 +21,6 @@ type LSM6DS33 struct {
 	err error
 }
 
-type RawSample struct {
-	Accel [3]int16
-	Gyro  [3]int16
-	Temp  int16
-}
-
 func New(cn io.ReadWriter) *LSM6DS33 {
 	return &LSM6DS33{cn, nil}
 }
