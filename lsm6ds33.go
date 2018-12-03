@@ -66,7 +66,7 @@ func (d *LSM6DS33) Reset() error {
 	return d.err
 }
 
-// ReadId reads and returns the device ID.
+// ReadId returns the device ID.
 func (d *LSM6DS33) ReadId() (byte, error) {
 	d.write(WHO_AM_I)
 
